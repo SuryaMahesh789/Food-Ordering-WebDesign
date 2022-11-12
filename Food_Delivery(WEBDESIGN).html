@@ -1,0 +1,943 @@
+
+<!-- declaring that we are going to use html 5 for designing the web pages -->
+<!DOCTYPE html>
+
+<!-- specifying the language we are going to use in html for assisting search engines of web browser -->
+<html lang="en">
+
+<!-- head stores the meta data of the page -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+    <link rel="stylesheet" href="styles.css">
+<title>FOOD-DELIVERY-WEBSITE</title>
+
+<style>
+
+
+
+/* css variables */
+/* css reset initially */
+
+
+#navbar
+{
+    display:flex;
+    align-items: center;
+   z-index:1;
+    
+}
+
+/* display flex for maing items in row */
+#navbar ul{
+    display: flex;
+}
+
+
+
+#navbar::before
+{
+    content:"";
+    background-color: black;
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    opacity:0.4;
+}
+
+
+
+/* logo div styling */
+#logo
+{
+    /* margin:14rem 13rem; */
+    margin:-1.2rem 55;
+    background-color: white;
+
+}
+
+/* logo image styling */
+#imglogo
+{
+    /* width:125.4rem;
+    height:86.25rem; */
+width:10.0rem;
+    /* width:83.6rem; */
+    height:8.0rem;
+    /* margin:10rem 10rem; */
+    margin:2.5rem 0.5rem 1.0rem 2.0rem;
+}
+
+#imglogo:hover
+{
+    width:20.0rem;
+    height:16.0rem;
+}
+
+/* removing the list style type to none so circles avoided */
+#navbar ul li
+{
+list-style:none; 
+font-size:2.0rem;
+}
+
+
+#navbar
+{
+    position:relative;
+    background-color:gray;
+    position:fixed;
+    height:7.0rem;
+    width:100%;
+    opacity:0.8;
+}
+
+
+/* padding for a element */
+#navbar ul li a
+{
+display:block;
+padding: 0.2rem 2.5rem;
+text-decoration:none;
+/* background-color:white; */
+margin:0rem 5.0rem;
+color: white;
+
+}
+
+#navbar ul li a:hover
+{
+    border-radius:2.0rem;
+background-color:white;
+color:black;
+
+}
+
+/* home section styling */
+#home
+{
+padding:0.3rem 20.0rem;
+height:40.0rem;
+margin-top:0rem;
+
+}
+
+/* #home::before{
+    content:"";
+    background-color: white;
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index: -1;
+    opacity:1;
+
+} */
+
+.button
+{
+    width:15.0rem;
+    height:4.0rem;
+    border:0.2rem solid white;
+    border-radius:1.5rem;
+    font-size:medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:black;
+    color:white;
+}
+
+.button:hover
+{
+    background-color:greenyellow;
+    font-size:large;
+    padding:0.3rem;
+    color:black;
+    border:0.2rem solid black;
+
+}
+
+
+.section
+{    
+    min-width:100vh;
+    min-height:70vh;
+    position:relative;
+    /* overflow: auto; */
+
+}
+
+#homeimg1
+{
+width:70.0rem;
+height:40.0rem;
+margin:6.6rem 0rem 1.0rem 58%;
+}
+
+#homediv
+{
+    margin: 10.0rem 0rem 0rem 0rem;
+    padding:6.0rem 0rem 0rem 0rem;
+
+}
+
+
+#topp{
+    color:tomato;
+font-size:10.0rem;
+font-style: italic;
+    background-color:white;
+   font-weight:20.0;
+   margin-top:5.0rem;
+}
+
+div span{
+    margin-top:5.0rem;
+}
+
+
+h1.home
+{
+  font-size:3.5rem;  
+}
+
+#homediv  a
+{
+    color:black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-style:bold;
+text-decoration:none;
+padding:1.0rem;
+margin:2.0rem 1.0rem 0rem 25.0rem;
+}
+
+#homediv a:hover
+{
+color:red;
+}
+
+#signup
+{
+    color:white;
+    background-color:black;
+    width:10.0rem;
+    height:3.0rem;
+}
+
+
+#description
+{
+color:rgb(0, 14, 95);
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: large;
+}
+
+#locform
+{
+    padding:2.5rem 2.5rem 0rem 2.5rem;
+    margin:2.5rem 3.0rem 0rem 3.0rem;
+    width:80%;
+}
+
+
+#location
+{
+    width:60.0rem;
+    height:5.0rem;
+    border:none;
+    border:0.2rem solid tomato;
+    font-size:1.5rem;
+    margin-right:0; 
+}
+
+#findfood
+{
+    width:15.0rem;
+    height:5.6rem;
+    color:aliceblue;
+    border:0.2rem solid tomato;
+    background-color:tomato;  
+    font-size:1.5rem; 
+}
+
+.indexp
+{
+ padding:0.5rem 0.5rem 2.0rem 0.5rem;
+ word-spacing:0.2rem;
+ margin:8.0rem 3.0rem 0rem 3.0rem;
+ font-size: x-large;
+ font-family: cursive;
+ font-weight: 100;
+ color:rgb(13, 13, 63);
+}
+
+.services
+{
+background-color:black;
+width:100%;
+height:40.0rem;
+display:flex;
+color:tomato;
+font-size:2.5rem;
+padding:0.5rem;
+border:0.2rem solid black;
+border-radius:2.0rem;
+overflow: auto;
+position:relative;
+
+}
+
+
+.box
+{
+    width:30%;
+    /* border:2rem solid white; */
+    margin-left:5%;
+    /* height:300rem; */
+}
+
+#delimg,#ordimg,#trackimg
+{
+    margin: 2.0rem 0rem 2.0rem 0rem;
+    width:40.0rem;
+    height:30.0rem;
+}
+
+#delimg:hover,#ordimg:hover,#trackimg:hover
+{
+    transform:scale(1.1);
+    transition-duration:1s;
+}
+
+#servicesh1,#aboutush1,#contactush1,#order,#socialsh1
+{
+    text-align: center;
+    font-size:3.0rem;
+    border:0.2rem solid black;
+    border-radius:3.0rem;
+    width:20%;
+    margin:2.0rem 30% 3.0rem 30%;
+    background-color:tomato;
+    color:white;
+}
+
+
+#servicesh1:hover,#aboutush1:hover,#contactush1:hover,#order:hover,#socialsh1:hover
+{ 
+    color:greenyellow;
+}
+
+#aboutus
+{
+    width:70%;
+    margin:2.0rem auto 2.0rem;
+    border:0.5rem solid tomato;
+    padding:1.0rem;
+    border-radius: 3.0rem;
+    background-color:gold;
+    color: darkblue;
+    font-style: italic;
+font-size: large;
+    animation-name:surya1;
+    animation-duration:10s;
+    animation-iteration-count:2;
+
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+    animation-fill-mode: backwards;
+    position:relative;
+    overflow: auto;
+}
+
+@keyframes surya1
+{
+
+from
+{
+    margin-right:0;    
+}
+
+to
+{
+    margin-right:50.0rem;
+    color:black;
+    background-color:rgb(149, 224, 234);
+    /* font-size:large;; */
+}
+
+}
+
+.contactform
+{
+display: inline-block;
+width:70%;
+padding:1.0rem 3.0rem 0.5rem 3.0rem;
+margin:1.0rem auto 3.0rem;
+border:0.3rem solid tomato;
+background-color: azure;
+align-items: center;
+justify-content: center;
+border-radius:1.0rem;
+position:relative;
+overflow: auto;
+}
+
+#formp
+{
+    margin:1.0rem 0rem 0rem 0rem;
+    /* clear:right; */
+}
+
+
+#ios,#android
+{
+    width:30.0rem;
+    height:5.0rem;
+    background-color:black;
+    color:tomato;
+    border:0.3rem solid white;
+    border-radius:1.5rem;
+    font-size: large;
+    margin-left:5rem;
+
+}
+
+#ios:hover,#android:hover
+{
+  transform: scale(1.01);
+  background-color:rgb(186, 176, 192);
+  color: black;
+  border:0.35rem solid tomato;
+transform:scale(1.15);
+}
+
+
+input[type=text],input[type=email]
+{
+    /* margin:0.5rem; */
+width:50%; 
+height:4.0rem;
+border:0.3rem solid tomato;
+border-radius:1.0rem;
+}
+
+
+input[type=number]
+{
+    /* margin-right:1.0rem; */
+    /* margin-left:1.0rem; */
+width:20%; 
+height:4.0rem;
+border:0.3rem solid black;
+border-radius:1.0rem;
+}
+
+.pcontactform 
+{
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:2.0rem;
+    margin-bottom:2.0rem;
+    width:50%; 
+    height:3.0rem;
+
+}
+
+/* input[type=radio]
+{
+    margin-right:20rem;
+    margin-left:1.0rem;
+} */
+
+
+input[type=submit],input[type=reset]
+{
+    height:5.0rem;
+    width:25%;
+    border:0.2rem solid black;
+    border-radius:0.5rem;
+    margin-left:5.0rem;
+    font-size: large;
+
+}
+
+input[type=submit]:hover
+{
+   background-color: greenyellow;
+   font-size: larger;
+   border-radius:0.7rem;
+   border:0.3rem solid tomato;
+
+}
+
+input[type=reset]:hover
+{
+   background-color: red;
+   font-size: larger;
+   border-radius:0.7rem;
+   border:0.3rem solid blue;
+
+}
+
+
+/* 
+#formimg1
+{
+    float:right;
+    /* margin-left:5.0rem;
+    margin-right:5.0rem;
+ */
+
+
+/* #formimg3
+{
+    float:left;
+    margin-right:50rem;
+    margin-left:50rem;
+
+} */
+
+
+
+.container
+{
+    display:flex;
+    width: 100%;
+    min-width:40.0rem;
+    height:55.0rem;
+    border:0.2rem solid tomato;
+    border-radius:1.0rem;
+background-color: black;
+position:relative;
+overflow: auto;
+}
+
+.dibba
+{
+    height:40.0rem;
+    width:40.0rem;
+    margin:1.0rem 0 1.0rem 2%;
+    padding:3.0rem;
+}
+.orderimg
+{
+    width:40.0rem;
+    height:40.0rem;
+/* overflow: scroll; */
+}
+
+.orderbtn
+{
+    width:30.0rem;
+    height:5.0rem;
+    border:0.3rem solid tomato;
+    border-radius:1.5rem;
+    font-size: large;
+
+}
+
+.orderbtn:hover
+{
+  transform: scale(1.01);
+  background-color:yellow;
+  border:0.35rem solid tomato;
+
+}
+
+.socials
+{
+    background-color: gray;
+    width:100%;
+    height:60.0rem;
+    min-width:40.0rem;
+    position:relative;
+overflow: auto;
+}
+
+.socials
+{
+    display:flex;
+    min-width:40.0rem;
+
+}
+
+.petta
+{
+    /* border:2rem solid tomato; */
+    /* width:40.0rem; */
+    max-width:100vh;
+    min-width:40.0rem;
+    text-align: center  ;
+}
+
+.petta li{
+    margin-top:1.0rem;
+    list-style-type: none;
+    font-size: large;
+
+}
+
+.petta li:hover
+{
+  transform:scale(1.1);
+}
+/* 
+1 rem=16px by defualt
+but if 1 rem=10px then calculation will be easy
+so make root element font size as 10px 
+change the size in html font as 10px
+
+ */
+
+html
+{
+    font-size:62.5%;
+/* font-size:10px; */
+}
+
+
+@media(max-width:998px)
+{
+    html
+    {
+        font-size:55%;
+    }
+}
+
+@media(max-width:768px)
+{
+    html
+    {
+        font-size:45%;
+    }
+}
+
+
+
+</style>
+
+<!-- internal styling -->
+</head>
+<body>
+<nav class="navbar" id="navbar">
+<div id="logo">
+    <img id="imglogo" src="https://www.decolore.net/wp-content/uploads/2019/09/food-logo-templates-cover.png" alt="Error" id="logoimg">
+</div>
+
+<ul>
+    <li class="item"><a href="#home">Home</a></li>
+    <li class="item"><a href="#services">Services</a></li>
+    <li class="item"><a href="#aboutus">About Us</a></li>
+    <li class="item"><a href="#contactus">Contact Us</a></li>
+    <li class="item"><a href="#order">Order</a></li>
+    <li class="item"><a href="#socials">Socials</a></li>
+</ul>
+</nav>
+
+<section id="home" class="section">
+    <!-- <img id="homeimg1" src="https://thumbs.dreamstime.com/b/people-eating-healthy-meals-wooden-table-top-view-food-delivery-people-eating-healthy-meals-wooden-table-food-delivery-160387494.jpg" alt="error" > -->
+   <div id="homediv">
+    <span id="topp">Delicious</span>
+    <a id="login" href="">Login</a>
+    <input id="signup" type="submit" value="Sign up">
+    <br><br>
+    <h1 class="home"> Welcome To <b style="color:tomato; font-style:italic;">Delicious</b> Food Service.</h1>
+    <p id="description">Order food from favourite restaurants near you. 
+        Order food online. Get fresh food delivery from FreshMenu.
+  CATEGORIES VEG PRICE FILTERS Sandwiches Burgers & Wraps Sides & Beverages
+ Fresh Desserts Rice Bowls Noodle Bowls Pasta</p>
+</div>
+ 
+<form id="locform" action="">
+    <input id="location" type="text" placeholder=" Enter your delivery location" required><input id="findfood" type="submit" value="FIND FOOD">
+</form>
+</section>
+
+<div style="text-align:center;" class="indexp">
+    India's largest online food ordering and delivery platform. Our goal is not only to surprise taste buds but also to deliver happiness
+    We The team at Delicious has excelled in providing services that are customer-centric to meet all deadlines in the speedy and efficient network of delivery partners. 
+       </div>
+    
+<br><br><br>
+
+<section id="services">
+    <h1 id="servicesh1">Our Services</h1>
+  <div  class="services">
+
+    <div class="box" id="item1">
+        <img id="delimg" src="http://www.thefoodjournal.com.sg/wp-content/uploads/2016/08/fooddeliveryman.jpg" alt="delivery" width="40.0rem" height="30.0rem">
+          Lightning Fast delivery
+      </div>
+    
+      <div class="box" id="item2">
+        <img id="ordimg" src="https://cdn11.bigcommerce.com/s-d7594/product_images/uploaded_images/MinOrder.jpg" alt="nominorder" width="40.0rem" height="30.0rem">
+          &nbsp;&nbsp;No Restriction On Orders
+    </div>
+    <!-- https://miro.medium.com/max/1400/1*arkT1YUCcVnEuTXeYOf1Bg.jpeg -->
+      <div class="box" id="item3">
+        <img id="trackimg" src="https://peerbits-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/restaurant-mobility-solution-track-order-status.jpg" alt="tracking" width="40.0rem" height="30.0rem">
+          Live Tracking On Delivery
+    </div>
+    
+  </div>
+
+</section>
+
+
+<div style="text-align:center;" class="indexp">
+    Meal delivery orders are typically on demand, intended to be eaten right away, and include hot, already-prepared food. While some service providers offer subscription services, ordering for delivery usually involves contacting a local restaurant or chain by telephone or online. Online ordering is available in many countries, where some stores offer online menus and ordering. Since 1995, companies such as Waiter.com have their own interfaces where customers order food from nearby restaurants that have partnered with the service. Meal delivery requires special technology and care, since the food items are already cooked and prepared, and can be easily damaged if dropped, tilted, or left out for long periods of time. Hotbags are often used to keep food warm.
+     They are thermal bags, typically made of vinyl, nylon, or Cordura, that passively retain heat.[10]
+     This is one of the reasons why <q>Delicious</q> is so concerned about keeping Our partner delivery workers happy and healthy.
+     We also deliver to the Popular cities In India
+     Ahmedabad , Bangalore , Chennai , Delhi , Gurgaon , Hyderabad , Kolkata , Mumbai , Pune& more.
+Restaurants in your pocket
+Order from your favorite restaurants & track on the go, with the all-new Swiggy app.
+
+</div>
+    
+<br><br>
+
+   <section id="aboutus">
+    <h1 id="servicesh1">About Us</h1>
+
+<div>
+    <p>
+        Restaurant Prepared Food Delivery. This is a kind of on-demand delivery service that has disrupted the traditional market. ...
+    Meal Kits Delivery. Companies like Blue Apron, Freshly are catering to this segment. ...
+    Grocery Delivery. ...
+    Veggie Box Delivery.
+
+    </p>
+
+    <p>
+        <p style="font-size:2.5rem; text-align: left;"><b>Features of the Food Delivery Website:</b></p>
+        Offers food delivery services in 10000+ cities across 24 countries
+        The website has more than 100 million active foodies
+        Foodies can login and add their reviews about restaurants and food
+        Business owners can list their restaurant on the website and add details such as address, menus, photos and lots more
+        The website is available in languages such as English, Portuguese, Italian, Vietnamese, Slovak, Polish, Turkish, Spanish and Czech
+        Available in both desktop and mobile versions
+
+        It is available in more than 600 cities spread across 56 countries
+The website offers food delivery not just to homes and offices, but also to other locations like parks and grounds
+People who want to make extra money can become dashers at Doordash and deliver food
+Project DASH is its CSR project,  through which Doordash donates excess food  from restaurants to Feeding America Charity’s MealConnect system
+    </p>
+
+    <p>
+        <p style="font-size:2.5rem;"><b>Technologies Used in the Website:</b>
+            <ul>
+                <li>New Relic to monitor user experience in real time</li>
+                <li>Google Conversion Tracker</li>
+                <li>Google Analytics</li>
+                <li>Facebook Pixel</li>
+                <li>Google Content Experiments</li>
+                <li> Facebook Conversion Tracker</li>
+            </ul></p>
+    </p>
+
+    <p>
+        <p style="font-size:2.5rem;"><b>Who are We ?</b> </p>
+            The website has more than 100 million active foodies
+            Foodies can login and add their reviews about restaurants and food
+            Business owners can list their restaurant on the website and add details such as address, menus, photos and lots more
+            The website is available in languages such as English, Portuguese, Italian, Vietnamese, Slovak, Polish, Turkish, Spanish and Czech
+            Available in both desktop and mobile versions
+    
+    </p>
+
+    <p style="font-size:2.5rem;"><b>What We Do ?</b> </p>
+        Restaurant Prepared Food Delivery. This is a kind of on-demand delivery service that has disrupted the traditional market. ...
+        Meal Kits Delivery. Companies like Blue Apron, Freshly are catering to this segment. ...
+        Grocery Delivery. ...
+        Veggie Box Delivery.
+
+</p>
+
+
+</div>
+   </section>
+
+ 
+<section class="contactus" id="contactus">
+    <h1 id="contactush1">Contact Us</h1>
+<form id="contactform" class="contactform">
+    <!-- <img id="formimg1" src="https://www.evetech.co.za/repository/ProductImages/contact-evetech-helpdesk-44.0rem.png" alt="contactformimg1"> -->
+    <!-- <img id="formimg2" src="https://www.irislink.com/Partners/test/Menu2018/img/Contactus-01.jpg" alt="contactformimg2" width="300rem" height="300rem">
+    <img id="formimg3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTynXA6pooXHNLRwq0MOoMT0bGBumNM8WTZDg&usqp=CAU" alt="contactformimg3"  width="300rem" height="300rem"> -->
+
+    <div id="formp">
+        
+    <button id="ios">Download App On IOS</button>
+    <button id="android">Download App On Android</button>
+        <p for="name"><input type="text" name="name" placeholder="  Enter Your Full Name " required></p>
+    <p for="email"><input type="email" name="email" placeholder="  Enter Your Email Address " required></p>
+    <p for="address"><input type="text" name="address" placeholder="  Enter Your Residential Address " required></p>
+    <p class="pcontactform"> Enter Your Age <input type="number" name="number" min="18" max="100" placeholder="Age >=18" required></p>
+    <p class="pcontactform"> Select Your Gender <input type="radio" name="gender">Male<input type="radio" name="gender" >Female<input type="radio" name="gender">Others</p>
+    <p class="pcontactform">Are You Working <input name="working" type="checkbox" required></p>
+    <p><textarea name="textarea" id="" cols="20" rows="7" placeholder="Write Your Subject......" required></textarea></p>
+    <input type="submit" value="submit"><input type="reset" value="reset">
+
+    </div>
+</form>
+</section>
+
+<section class="order">
+    <h1 id="order">Order</h1>
+<div class="container">
+    <div class="dibba">
+        <img class="orderimg" src="https://media.easemytrip.com/media/Blog/India/636977607425696252/636977607425696252QYiiUU.jpg" alt=""><button class="orderbtn">Veg</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://us.123rf.com/450wm/indianfoodimages/indianfoodimages1908/indianfoodimages190800031/128895303-assorted-indian-non-vegetarian-food-recipe-served-in-a-group-includes-chicken-curry-mutton-masala-an.jpg?ver=6" alt=""><button class="orderbtn">NonVeg</button>
+    </div>
+
+    <div class="dibba">
+        <img class="orderimg" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/make-ahead-egg-sandwiches-1572019260-1-1650639887.jpg?crop=0.946xw:0.630xh;0.0192xw,0.360xh&resize=640:*" alt=""><button class="orderbtn">BreakFast</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://i.pinimg.com/originals/14/61/c3/1461c3a1d553b0d243934b37a858d794.jpg" alt=""><button class="orderbtn">Lunch</button>
+    </div>
+
+    <div class="dibba">
+        <img class="orderimg" src="https://www.grandecig.com/hs-fs/hubfs/images/blog_images/2019-Blog-Images/Savory_Snacks.jpg?width=734&name=Savory_Snacks.jpg" alt=""><button class="orderbtn">snacks</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://c.ndtvimg.com/2022-03/jcliv9dg_shahi-paneer_625x300_15_March_22.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886" alt=""><button class="orderbtn">Dinner</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://static-ssl.businessinsider.com/image/53b579166da811b136c10d7b-891-667/burger-american-flag.jpg?maxX=480" alt=""><button class="orderbtn">American</button>
+    </div>
+
+    <div class="dibba">
+        <img class="orderimg" src="http://d20aeo683mqd6t.cloudfront.net/articles/title_images/000/039/267/medium/japan-food_%281%29.jpg?2020" alt=""><button class="orderbtn">Japanese</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://cdn-almjc.nitrocdn.com/aZYyrACOqPKwqacflNAAVPArFRYGkpZe/assets/static/optimized/rev-76f8472/wp-content/uploads/2020/02/46d82e1a0b0100936591de3958f3408d.Chinese-food.jpg" alt=""><button class="orderbtn">chinese</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://www.sodhatravel.com/hs-fs/hubfs/North%20India%20Food%20Collage.jpg?width=5120&name=North%20India%20Food%20Collage.jpg" alt=""><button class="orderbtn">North-Indian</button>
+    </div>
+
+    <div class="dibba">
+        <img class="orderimg" src="https://www.lacademie.com/wp-content/uploads/2022/01/popular-mexican-foods.jpg" alt=""><button class="orderbtn">Mexican</button>
+    </div>
+    <div class="dibba">
+        <img class="orderimg" src="https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/content6553.jpg" alt=""><button class="orderbtn">south-indian</button>
+    </div>
+
+</div>
+
+</section>
+
+
+<div style="text-align:center;" class="indexp">
+    You get the whole package. 
+    You can place your order for takeaways, delivery, or if you'd like to keep your food ready in advance, you can pre-order too!
+    Avail exclusive offers, and order specials that are not available on aggregators.
+    Distance is never an issue. Order from your favourite restaurants even if they’re further away than 12KMs.
+</div>
+    
+<br><br>
+
+
+
+
+
+<section  id="socials">
+    <br><br>
+    <h1 id="socialsh1">Socials</h1>
+    <div class="container2 socials">
+        <div class="petta">
+            <ul>
+                <li>vijayawada</li>
+                <li>ongole</li>
+                <li>hyderabad</li>
+                <li>vinukonda</li>
+                <li>guntur</li>
+                <li>narasaraopet</li>
+                <li>banglore</li>
+                <li>tamilnadu</li>
+                <li>chennai</li>
+                <li>tirupati</li>
+                <li>rajamundry</li>
+                <li>malladugu</li>
+                <li>ukraine</li>
+                <li>rusiia</li>
+                <li>bhutan</li>
+                <li>khaleefapur</li>
+                <li>mbpur</li>
+            </ul>
+        </div>
+        <div class="petta">
+            <ul>
+                <li>pune</li>
+                <li>delhi</li>
+                <li>mumbai</li>
+                <li>canada</li>
+                <li>usa</li>
+                <li>newyork</li>
+                <li>bhimavaram</li>
+                <li>srikakulam</li>
+                <li>tuni</li>
+                <li>kavali</li>
+                <li>mylavaram</li>
+                <li>egypt</li>
+                <li>raulapalem</li>
+                <li>ahobilam</li>
+                <li>addhanki</li>
+                <li>medhak</li>
+                <li>secunderabad</li>
+            </ul>
+        </div>
+        <div class="petta">
+            <ul>
+                <li>africa</li>
+                <li>australia</li>
+                <li>mars</li>
+                <li>assam</li>
+                <li>bhutan</li>
+                <li>neptune</li>
+                <li>amalapuram</li>
+                <li>kothapeta</li>
+                <li>savalyapuram</li>
+                <li>austria</li>
+                <li>belgium</li>
+                <li>indonesia</li>
+                <li>jaleem</li>
+                <li>chinapalem</li>
+                <li>nepalem</li>
+                <li>kapalam</li>
+                <li>thepalam</li>
+            </ul>
+        </div>
+        <div class="petta">
+            <ul>
+                <li>pakistan</li>
+                <li>khajikistan</li>
+                <li>ujbekistan</li>
+                <li>jalikistan</li>
+                <li>arab</li>
+                <li>dubai</li>
+                <li>singapore</li>
+                <li>japan</li>
+                <li>china</li>
+                <li>nepal</li>
+                <li>kashmir</li>
+                <li>thanjavur</li>
+                <li>jaleen</li>
+                <li>cheemalakurthi</li>
+                <li>nethuru</li>
+                <li>kaithi</li>
+                <li>bheem</li>
+            </ul>
+        </div>
+    </div>
+<p style="font-size:large;">@copyrights reserved for suryamahesh.kolisetty2022</p>
+</section>
+
+</body>
+</html>
