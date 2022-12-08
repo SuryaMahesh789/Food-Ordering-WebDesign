@@ -1,4 +1,4 @@
-# Delicious -> Food Delivery Website.
+# Delicious -> Food Delivery Website. (Static Website)
 
 ## Opening/Welcome Page Of Delicious
 ![output-1](https://user-images.githubusercontent.com/101471548/201490698-3e53938a-2769-483f-b1aa-2cc70ca70e81.jpg)
